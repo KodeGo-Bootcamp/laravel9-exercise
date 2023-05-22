@@ -39,9 +39,24 @@
                 <div style="padding-right:4%">20k <strong>followers</strong></div>
                 <div style="padding-right:4%">100 <strong>following</strong></div>
                 </div>
-                
+                <div class="pt-4">Title</div>
+            <div >description</div>
+            <div >Website Link: </div>
+           
             
             </div>
+            <div class="row">   
+                <div class="col-4">
+                    <img class="w-100" src="https://github.com/KodeGo-Bootcamp/HTML-Activity-Images/blob/main/pexels-dominika-roseclay-2023384.jpg?raw=true" alt="">
+                </div>
+                <div class="col-4">
+                <img class="w-100" src="https://github.com/KodeGo-Bootcamp/HTML-Activity-Images/blob/main/pexels-dominika-roseclay-2023384.jpg?raw=true" alt="">
+                </div>
+                <div class="col-4">
+                <img class="w-100" src="https://github.com/KodeGo-Bootcamp/HTML-Activity-Images/blob/main/pexels-dominika-roseclay-2023384.jpg?raw=true" alt="">
+                </div>
+            </div>
+
            
 
         </div>
