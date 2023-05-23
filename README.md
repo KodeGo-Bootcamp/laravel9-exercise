@@ -20,4 +20,14 @@ Color palettes
 
 
 
-## 
+## Collab Exercise task
+
+### Setup Profile Model
+
+```
+Doables - Rome
+> create Profile model
+> setup One to One relationship with User table 
+> able to display contents from Profile table in home.blade
+> create profile folder -> views, then put home.blade inside
+```
