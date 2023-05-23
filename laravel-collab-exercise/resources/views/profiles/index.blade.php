@@ -33,15 +33,15 @@
            
             <div class="col-9 pt-5">
                 <h1 class="username text-uppercase">TestUser1</h1>
-                <p class="user">@test_user</p>
+                <p class="user">{{$user->username}}</p>
                 <div class="d-flex">
                 <div style="padding-right:4%">100 <strong>posts</strong></div>
                 <div style="padding-right:4%">20k <strong>followers</strong></div>
                 <div style="padding-right:4%">100 <strong>following</strong></div>
                 </div>
-                <div class="pt-4">Title</div>
-            <div >description</div>
-            <div >Website Link: </div>
+                <div class="pt-4">{{$user->title}}</div>
+            <div >{{$user->description}}</div>
+            <div >{{$user->url}}</div>
            
             
             </div>
