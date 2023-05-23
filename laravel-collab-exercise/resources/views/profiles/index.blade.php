@@ -39,9 +39,9 @@
                 <div style="padding-right:4%">20k <strong>followers</strong></div>
                 <div style="padding-right:4%">100 <strong>following</strong></div>
                 </div>
-                <div class="pt-4">{{$user->title}}</div>
-            <div >{{$user->description}}</div>
-            <div >{{$user->url}}</div>
+                <div class="pt-4">{{$user->profile->title}}</div>
+            <div >{{$user->profile->description}}</div>
+            <div >{{$user->profile->url}}</div>
            
             
             </div>
