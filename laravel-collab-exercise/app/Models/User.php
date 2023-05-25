@@ -44,8 +44,19 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-		public function profile() 
-		{
-			return $this->hasOne(Profile::class);
-		}
+    public function profile()
+    {
+        return $this->hasOne(Profile::class);
+    }
+
+    /**
+     * Get all of the posts fer
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
+
 }
