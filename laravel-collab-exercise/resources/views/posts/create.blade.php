@@ -8,7 +8,7 @@
      @csrf
      <div class="row">
         <div class="row mb-3" >
-            <h1>Add new post</h1> 
+            <h1>Add new post</h1>
                 <label for="caption" class="col-md-4 col-form-label text-md-end">Post caption</label>
             <div class="col-md-6">
                  <input id="caption" type="text" class="form-control @error('caption') is-invalid @enderror" name="caption" value="{{ old('caption') }}" required autocomplete="caption" autofocus>

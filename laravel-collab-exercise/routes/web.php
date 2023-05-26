@@ -21,6 +21,7 @@ Route::get('/', function () {
 
 Auth::routes();
 Route::get('/p/create', [PostsController::class, 'create']);
+// static \Illuminate\Routing\Route get(string $uri, array|string|callable|null $action = null)
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::post('/p', [PostsController::class, 'store']);
 Route::get('/profile/{user}', [ProfilesController::class, 'index'])->name('profile.show');
