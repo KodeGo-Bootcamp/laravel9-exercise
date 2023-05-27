@@ -48,7 +48,7 @@
             </div>
             <div class="row">
                 @foreach ($user->posts as $post)
-                    <div class="col-4">
+                    <div class="col-4 pt-4 bg-dark">
                         <img class="w-100" src="/storage/{{$post->image}}" alt="">
                     </div>
                 @endforeach
