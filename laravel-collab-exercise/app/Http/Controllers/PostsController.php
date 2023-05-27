@@ -27,23 +27,23 @@ class PostsController extends Controller
             'image' => 'required | image',
         ]);
 
-        // Store the image request in a variable
+        // Store the image request in a variable -done
         $imagePath = request('image')->store('uploads','public');
 
         // Setup Intervention > Setup the namespace
 
         // Setup an array for caption key value pair to access the array inside of the $data
 
-        //create() is a built-in hasFactory method
+        //create() is a built-in hasFactory method -done
         auth()->user()->posts()->create([
             'caption' => $data['caption'],
             'image' => $imagePath
         ]);
 
-        // comment ouot this test die and dump method
+        // comment out this test die and dump method -done
 
 
-        // Redirection to the /profile/ path for the authenticate user using user id
+        // Redirection to the /profile/ path for the authenticate user using user id -done
         return redirect('/profile/' . auth()->user()->id);
 
 
