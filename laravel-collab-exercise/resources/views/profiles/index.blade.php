@@ -50,19 +50,13 @@
             <div class="row">
                 @foreach ($user->posts as $post)
                     <div class="col-4 pt-4 bg-dark">
+                        <a href="/p/{{$post->user->id}}">
                         <img class="w-100" src="/storage/{{$post->image}}" alt="">
+</a>    
                     </div>
                 @endforeach
 
-                {{-- <div class="col-4">
-                    <img class="w-100" src="https://github.com/KodeGo-Bootcamp/HTML-Activity-Images/blob/main/pexels-dominika-roseclay-2023384.jpg?raw=true" alt="">
-                </div>
-                <div class="col-4">
-                <img class="w-100" src="https://github.com/KodeGo-Bootcamp/HTML-Activity-Images/blob/main/pexels-dominika-roseclay-2023384.jpg?raw=true" alt="">
-                </div>
-                <div class="col-4">
-                <img class="w-100" src="https://github.com/KodeGo-Bootcamp/HTML-Activity-Images/blob/main/pexels-dominika-roseclay-2023384.jpg?raw=true" alt="">
-                </div> --}}
+                
             </div>
 
 
