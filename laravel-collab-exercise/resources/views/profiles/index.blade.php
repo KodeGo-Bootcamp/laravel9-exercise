@@ -25,14 +25,15 @@
 <div class="container">
 <div class="row d-flex">
             <div class="col-3">
-                <img 
-                src="https://img.rawpixel.com/private/static/images/website/2022-05/ns8230-image.jpg?w=1200&h=1200&dpr=1&fit=clip&crop=default&fm=jpg&q=75&vib=3&con=3&usm=15&cs=srgb&bg=F4F4F3&ixlib=js-2.2.1&s=348b2fd5c7adbc576517dae7c32de4aa" 
+                <img
+                src="https://img.rawpixel.com/private/static/images/website/2022-05/ns8230-image.jpg?w=1200&h=1200&dpr=1&fit=clip&crop=default&fm=jpg&q=75&vib=3&con=3&usm=15&cs=srgb&bg=F4F4F3&ixlib=js-2.2.1&s=348b2fd5c7adbc576517dae7c32de4aa"
                 alt="profile"
                 class="rounded-circle" style="width:20vw"/>
             </div>
-           
+
             <div class="col-9 pt-5">
                 <h1 class="username text-uppercase">TestUser1</h1>
+                <a href="/p/create">Add Post</a>
                 <p class="user">{{$user->username}}</p>
                 <div class="d-flex">
                 <div style="padding-right:4%">100 <strong>posts</strong></div>
@@ -42,11 +43,17 @@
                 <div class="pt-4">{{$user->profile->title}}</div>
             <div >{{$user->profile->description}}</div>
             <div >{{$user->profile->url}}</div>
-           
-            
+
+
             </div>
-            <div class="row">   
-                <div class="col-4">
+            <div class="row">
+                @foreach ($user->posts as $post)
+                    <div class="col-4">
+                        <img class="w-100" src="/storage/{{$post->image}}" alt="">
+                    </div>
+                @endforeach
+
+                {{-- <div class="col-4">
                     <img class="w-100" src="https://github.com/KodeGo-Bootcamp/HTML-Activity-Images/blob/main/pexels-dominika-roseclay-2023384.jpg?raw=true" alt="">
                 </div>
                 <div class="col-4">
@@ -54,10 +61,10 @@
                 </div>
                 <div class="col-4">
                 <img class="w-100" src="https://github.com/KodeGo-Bootcamp/HTML-Activity-Images/blob/main/pexels-dominika-roseclay-2023384.jpg?raw=true" alt="">
-                </div>
+                </div> --}}
             </div>
 
-           
+
 
         </div>
 </div>
