@@ -36,7 +36,8 @@
                 <a href="/p/create">Add Post</a>
                 <p class="user">{{$user->username}}</p>
                 <div class="d-flex">
-                <div style="padding-right:4%">100 <strong>posts</strong></div>
+                <!-- display number of posts -->
+                <div style="padding-right:4%">{{$user->posts->count()}}<strong>posts</strong></div>
                 <div style="padding-right:4%">20k <strong>followers</strong></div>
                 <div style="padding-right:4%">100 <strong>following</strong></div>
                 </div>
