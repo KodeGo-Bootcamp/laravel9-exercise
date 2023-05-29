@@ -4,9 +4,15 @@
 
 
 <div class="container">
-     <h1>Photo of Posts</h1>
-
-    <img src="/storage/{{$post->image}}" alt="">
-
+    <div class="row">
+        <h1>Photo of Posts</h1>
+        <div class="col-8">
+            <img src="/storage/{{$post->image}}" alt="">
+        </div>
+        <div class="col-4">
+            <h3>{{$post->user->username}}</h3>
+        </div>
+    </div>
+     
 </div>
 @endsection
