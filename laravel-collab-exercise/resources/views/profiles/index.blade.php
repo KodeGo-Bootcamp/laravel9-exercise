@@ -32,9 +32,12 @@
             </div>
 
             <div class="col-9 pt-5">
-                <h1 class="username text-uppercase">TestUser1</h1>
+                <!-- <h1 class="username text-uppercase">TestUser1</h1> -->
+                <div>
+                <h1 class="user">{{$user->username}}</h1>
                 <a href="/p/create">Add Post</a>
-                <p class="user">{{$user->username}}</p>
+                </div>
+                <a href="/profile/{{$user->id}}/edit">Edit Profile</a>
                 <div class="d-flex">
                 <!-- display number of posts -->
                 <div style="padding-right:4%">{{$user->posts->count()}}<strong>posts</strong></div>
