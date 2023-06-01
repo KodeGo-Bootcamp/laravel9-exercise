@@ -35,9 +35,14 @@
                 <!-- <h1 class="username text-uppercase">TestUser1</h1> -->
                 <div>
                 <h1 class="user">{{$user->username}}</h1>
+                @can('update', $user->profile)
                 <a href="/p/create">Add Post</a>
+                @endcan
+                
                 </div>
+                @can('update', $user->profile)
                 <a href="/profile/{{$user->id}}/edit">Edit Profile</a>
+                @endcan
                 <div class="d-flex">
                 <!-- display number of posts -->
                 <div style="padding-right:4%">{{$user->posts->count()}}<strong>posts</strong></div>
