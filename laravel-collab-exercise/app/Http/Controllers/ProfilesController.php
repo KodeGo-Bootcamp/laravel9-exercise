@@ -40,7 +40,6 @@ class ProfilesController extends Controller
     
             $image->save();
         }
-
         // dd($data);
         dd(array_merge(
             $data,
