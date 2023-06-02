@@ -41,10 +41,10 @@ class ProfilesController extends Controller
             $image->save();
         }
         // dd($data);
-        dd(array_merge(
-            $data,
-            ['image' => $imagePath]
-        ));
+        // dd(array_merge(
+        //     $data,
+        //     ['image' => $imagePath]
+        // ));
         auth()->user()->profile->update(array_merge(
             $data,
             ['image' => $imagePath]
