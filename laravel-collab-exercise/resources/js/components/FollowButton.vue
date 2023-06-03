@@ -25,18 +25,18 @@ import axios from 'axios';
 
     export default {
          
-      
+       props:['userId'],
 
         mounted() {
             console.log('Component mounted.')
         }, 
         methods:{
             followThisUser(){
-                 alert('testFollow');
-                // axios.post('/follow/1')
-                //     .then(response => {
-                //         alert(response.data);
-                // });
+                //  alert('testFollow');
+                axios.post('/follow/' + this.userId)
+                     .then(response => {
+                        alert(response.data);
+                 });
             }
         }
     }    

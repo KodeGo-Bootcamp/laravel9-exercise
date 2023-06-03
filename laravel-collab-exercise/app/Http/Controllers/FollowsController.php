@@ -8,8 +8,8 @@ use App\Models\User;
 class FollowsController extends Controller
 {
     
-    // public function store(User $user){
-    //     return $user->username;
+     public function store(User $user){
+         return $user->username;
 
-    // }
+    }
 }

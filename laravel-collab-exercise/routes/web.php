@@ -30,7 +30,7 @@ Auth::routes();
 //     return ['followSuccess'];
 // });
 
-Route::post('follow/{user}', [App\Http\FollowsController::class, 'store']);
+Route::post('follow/{user}', [App\Http\Controllers\FollowsController::class, 'store']);
     
     
 
