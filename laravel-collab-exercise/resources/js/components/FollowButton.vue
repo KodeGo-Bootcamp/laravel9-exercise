@@ -24,17 +24,20 @@
 import axios from 'axios';
 
     export default {
+         
+      
+
         mounted() {
             console.log('Component mounted.')
         }, 
         methods:{
             followThisUser(){
-                // alert('testFollow');
-                axios.post('/follow/1').then(response=>{
-                    alert(response.data);
-                });
+                 alert('testFollow');
+                // axios.post('/follow/1')
+                //     .then(response => {
+                //         alert(response.data);
+                // });
             }
-
         }
-    }
+    }    
 </script>

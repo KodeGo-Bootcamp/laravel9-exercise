@@ -36,7 +36,7 @@
                 <h2 class="user align-items-center">{{$user->username}}</h2>
 
                 <!-- <button class="btn btn-primary ms-5 px-3" >Follow</button>  -->
-                <follow-btn></follow-btn>
+                <follow-btn ></follow-btn>
                 </div>
                 @can('update', $user->profile)
                 <a class="pl-3" href="/p/create">Add Post</a>
