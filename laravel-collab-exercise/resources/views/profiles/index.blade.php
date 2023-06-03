@@ -57,7 +57,8 @@
             <div class="row">
                 @foreach ($user->posts as $post)
                     <div class="col-4 pt-4 bg-dark">
-                        <a href="/p/{{$post->user->id}}">
+                        <!-- <a href="/p/{{$post->user->id}}"> -->
+                        <a href="/p/{{$post->id}}">
                         <img class="w-100" src="/storage/{{$post->image}}" alt="">
 </a>    
                     </div>

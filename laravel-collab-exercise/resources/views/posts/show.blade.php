@@ -18,21 +18,24 @@
 
     <div class="row">
         <div class="col-8">
-             <img src="/storage/{{$post->image}}" alt="">
+             <img src="/storage/{{$post->image}}" alt="" class="w-100">
         </div>
         <div class="col-4">
-            <div>
-                <div>
+            <div class="row__profile">
+                <div class="d-flex gap-2">
                     <div>
-                        <img src="/storage/{{$post->user->profile->image}}" alt="" class="rounded-circle" style="width:20vw">
+                        <img src="/storage/{{$post->user->profile->image}}" alt="" class="rounded-circle" style="max-width:3rem">
                     </div>
-                    <div>
-                        <h4>{{$post->user->username}}</h4>
+                    <div class="d-flex align-items-center">
+                        <h4><a href="/profile/{{$post->user->id}}">{{$post->user->username}}</a></h4>
                     </div>
-                </div>
-                <p>{{$post->caption}}</p>
-            </div>
-        </div>
-    </div>
+                   
+                </div> <!--End of d-flex gap-2-->
+                <hr>
+                <p><span class="font-weight-bold pr-3">{{$post->user->username}}</span>{{$post->caption}}</p>
+            </div><!--End of row__profile -->
+            
+        </div><!--End of col-4 -->
+    </div><!--End of row-->
 </div>
 @endsection
