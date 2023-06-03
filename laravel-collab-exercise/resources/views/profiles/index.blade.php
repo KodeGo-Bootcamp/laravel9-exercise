@@ -25,7 +25,7 @@
 <div class="row d-flex">
             <div class="col-3">
                 <img
-                src="/storage/{{$user->profile->image}}"
+                src="{{$user->profile->profileImage();}}"
                 alt="profile"
                 class="rounded-circle" style="width:20vw"/>
             </div>

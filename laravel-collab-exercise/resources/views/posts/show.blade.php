@@ -24,15 +24,17 @@
             <div class="row__profile">
                 <div class="d-flex gap-2">
                     <div>
-                        <img src="/storage/{{$post->user->profile->image}}" alt="" class="rounded-circle" style="max-width:3rem">
+                        <img src="/storage/{{($post->user->profile->profileImage();}}" alt="" class="rounded-circle" style="max-width:3rem">
                     </div>
                     <div class="d-flex align-items-center">
-                        <h4><a href="/profile/{{$post->user->id}}">{{$post->user->username}}</a></h4>
+                        <h3 style="padding-right:2%;"><a href="/profile/{{$post->user->id}}">{{$post->user->username}}</a></h3> | 
+
+                        <a href="#" style="padding-left:3%; font-weight:bold;"> Follow</a>
                     </div>
                    
                 </div> <!--End of d-flex gap-2-->
                 <hr>
-                <p><span class="font-weight-bold pr-3">{{$post->user->username}}</span>{{$post->caption}}</p>
+                <p><span style="font-weight:bold"><a href="/profile/{{$post->user->id}}">{{$post->user->username}}</a></span> | {{$post->caption}}</p>
             </div><!--End of row__profile -->
             
         </div><!--End of col-4 -->
