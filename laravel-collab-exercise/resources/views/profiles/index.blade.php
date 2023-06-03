@@ -25,7 +25,7 @@
 <div class="row d-flex">
             <div class="col-3">
                 <img
-                src="{{$user->profile->profileImage();}}"
+                src="{{$user->profile->profileImage()}}"
                 alt="profile"
                 class="rounded-circle" style="width:20vw"/>
             </div>
@@ -35,8 +35,8 @@
                 <div class="d-flex mb-3">
                 <h2 class="user align-items-center">{{$user->username}}</h2>
 
-                <button class="btn btn-primary ms-5 px-3" >Follow</button> 
-                
+                <!-- <button class="btn btn-primary ms-5 px-3" >Follow</button>  -->
+                <follow-btn></follow-btn>
                 </div>
                 @can('update', $user->profile)
                 <a class="pl-3" href="/p/create">Add Post</a>

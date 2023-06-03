@@ -24,7 +24,7 @@
             <div class="row__profile">
                 <div class="d-flex gap-2">
                     <div>
-                        <img src="/storage/{{($post->user->profile->profileImage();}}" alt="" class="rounded-circle" style="max-width:3rem">
+                        <img src="/storage/{{$post->user->profile->profileImage()}}" alt="" class="rounded-circle" style="max-width:3rem">
                     </div>
                     <div class="d-flex align-items-center">
                         <h3 style="padding-right:2%;"><a href="/profile/{{$post->user->id}}">{{$post->user->username}}</a></h3> | 

@@ -24,6 +24,11 @@ Auth::routes();
 
 // static \Illuminate\Routing\Route get(string $uri, array|string|callable|null $action = null)
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::post('follow/{user}', function(){
+    return ['followSuccess'];
+});
+
 Route::get('/p/create', [PostsController::class, 'create']);
 Route::post('/p', [PostsController::class, 'store']);
 Route::get('/p/{post}', [PostsController::class, 'show']);
