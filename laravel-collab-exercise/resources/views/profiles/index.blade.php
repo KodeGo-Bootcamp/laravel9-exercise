@@ -21,12 +21,11 @@
     </div>
 </div> -->
 
-
 <div class="container">
 <div class="row d-flex">
             <div class="col-3">
                 <img
-                src="storage/{{$user->profile->image}}"
+                src="/storage/{{$user->profile->image}}"
                 alt="profile"
                 class="rounded-circle" style="width:20vw"/>
             </div>
