@@ -18,9 +18,13 @@ const app = createApp({});
 // import ExampleComponent from './components/ExampleComponent.vue';
 import FollowButton from './components/FollowButton.vue';
 import AddButton from './components/AddButton.vue';
+import EditProfileButton from './components/EditProfileButton.vue';
+
 // app.component('example-component', ExampleComponent);
 app.component('follow-btn', FollowButton);
 app.component('add-btn', AddButton);
+app.component('edit-profile-btn', EditProfileButton);
+
 
 /**
  * The following block of code may be used to automatically register your

@@ -40,11 +40,11 @@
                 </div>
                 @can('update', $user->profile)
                 <!-- <a class="pl-3" href="/p/create">Add Post</a> -->
-                <add-btn></add-btn>
-                @endcan
-                |
-                @can('update', $user->profile)
-                <a href="/profile/{{$user->id}}/edit">Edit Profile</a>
+                <div class="d-flex gap-3" >
+                    <add-btn></add-btn>
+            
+                    <edit-profile-btn user-id="{{$user->id}}"><edit-profile-btn/>
+                </div>
                 @endcan
                 <div class="d-flex  mt-3">
                 <!-- display number of posts -->
