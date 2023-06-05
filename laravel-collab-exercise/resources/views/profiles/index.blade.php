@@ -60,7 +60,7 @@
             </div>
             <div class="row">
                 @foreach ($user->posts as $post)
-                    <div class="col-4 pt-4 bg-dark">
+                    <div class="col-4 pt-4">
                         <!-- <a href="/p/{{$post->user->id}}"> -->
                         <a href="/p/{{$post->id}}">
                         <img class="w-100" src="/storage/{{$post->image}}" alt="">

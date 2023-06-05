@@ -10,10 +10,16 @@ class Profile extends Model
     use HasFactory;
     protected $guarded = [];
 
-    public function profileImage(){
+    public function profileImage()
+    {
         $imagePath = ($this->image) ? $this->image : 'profile/b5HrMFuEixpf7gbCWNLYrOtXnIO3diL4NWiYTReL.png';
-        return '/storage/' . $imagePath;
 
+        return '/storage/'.$imagePath;
+    }
+
+    public function followers()
+    {
+        return $this->belongsToMany(User::class);
     }
 
     public function user()

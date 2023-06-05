@@ -7,11 +7,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
-use App\Models\Profile;
 
 class User extends Authenticatable
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    use HasApiTokens;
+    use HasFactory;
+    use Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -44,13 +45,14 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    protected static function boot(){
+    protected static function boot()
+    {
         parent::boot();
 
-        static::created(function ($user){
+        static::created(function ($user) {
             $user->profile()->create([
                 'title' => $user->username,
-                'description' => 'Add some description here'
+                'description' => 'Add some description here',
             ]);
         });
     }
@@ -61,13 +63,17 @@ class User extends Authenticatable
     }
 
     /**
-     * Get all of the posts fer
+     * Get all of the posts fer.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function posts()
     {
-        return $this->hasMany(Post::class)-> orderBy('created_at', 'DESC');
+        return $this->hasMany(Post::class)->orderBy('created_at', 'DESC');
     }
 
+    public function following()
+    {
+        return $this->belongsToMany(Profile::class);
+    }
 }
