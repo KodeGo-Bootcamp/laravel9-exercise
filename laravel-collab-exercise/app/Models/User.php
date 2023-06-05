@@ -57,11 +57,7 @@ class User extends Authenticatable
         });
     }
 
-    public function profile()
-    {
-        return $this->hasOne(Profile::class);
-    }
-
+ 
     /**
      * Get all of the posts fer.
      *
@@ -76,4 +72,10 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Profile::class);
     }
+
+    public function profile()
+    {
+        return $this->hasOne(Profile::class);
+    }
+
 }
