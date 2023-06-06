@@ -23,14 +23,21 @@ import axios from 'axios';
             }
         },
 
+        
         methods:{
             followThisUser(){
                 //  alert('testFollow');
                 axios.post('/follow/' + this.userId)
                      .then(response => {
                         // alert(response.data);
+                        this.status = ! this.status;
                         console.log(response.data);
+                 }).catch(errors =>{
+                    if(errors.response.status == 401){
+                        window.location = '/login';
+                    }
                  });
+
             }
         }, 
         computed: {
