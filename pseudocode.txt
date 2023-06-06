@@ -1,0 +1,37 @@
+> 1 User 1 Profile & 1 Profile 1 User one is to one relationship
+
+> 1 User many Posts on is to many relationship
+
+MODELS
+> Table schema creation. 
+  > user_id 
+  > optimize for search. 
+  > caption
+  > image
+
+> php artisan migrate
+
+> Database relationship > connect > PostsController > Models
+
+VIEWS
+> views 
+
+> posts/create.blade.php
+
+CONTROLLER
+> Create Logic of the application > PostsController.php
+
+
+> User relationship > Posts
+
+
+> Tinker will Posts
+
+
+> Routes > web.php
+
+> GET 	/photos/create 	create 	photos.create
+
+> POST 	/photos 	store 	photos.store
+
+> GET 	/photos/{photo} 	show 	photos.show

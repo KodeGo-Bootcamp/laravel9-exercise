@@ -11,7 +11,12 @@ class ProfilesController extends Controller
     {
         // $user = User::findOrFail($user);
         // return view('profiles.index', ['user' => $user]);
-        return view('profiles.index', compact('user'));
+
+        $follows = (auth()->user()) ? auth()->user()->following->contains($user->id) : false;
+
+        //dd($follows);
+
+        return view('profiles.index', compact('user', 'follows'));
     }
 
     public function edit(User $user)

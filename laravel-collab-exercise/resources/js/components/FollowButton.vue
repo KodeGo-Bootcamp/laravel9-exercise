@@ -1,20 +1,6 @@
 <template>
-    <!-- <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Example Component</div>
-
-                    <div class="card-body">
-                        I'm an example component.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
     <div>
-        <button class="btn btn-primary ms-5 px-3" @click="followThisUser">Follow</button> 
+        <button class="btn btn-primary ms-5 px-3" @click="followThisUser" v-text="buttonText"></button> 
     </div>
 
 
@@ -25,11 +11,18 @@ import axios from 'axios';
 
     export default {
          
-       props:['userId'],
+       props:['userId','follows'],
 
         mounted() {
             console.log('Component mounted.')
         }, 
+
+        data: function (){
+            return {
+                status: this.follows,
+            }
+        },
+
         methods:{
             followThisUser(){
                 //  alert('testFollow');
@@ -39,6 +32,11 @@ import axios from 'axios';
                         console.log(response.data);
                  });
             }
-        }
+        }, 
+        computed: {
+            buttonText(){
+                return(this.status) ? 'Unfollow' : 'Follow';
+            } // end of buttonText method
+        } // end of computed object
     }    
 </script>
