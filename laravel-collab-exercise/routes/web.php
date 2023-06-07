@@ -16,9 +16,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+
 
 Auth::routes();
 
@@ -30,10 +32,14 @@ Auth::routes();
 //     return ['followSuccess'];
 // });
 
+
+
+
+
 Route::post('follow/{user}', [App\Http\Controllers\FollowsController::class, 'store']);
     
     
-
+Route::get('/', [PostsController::class, 'index']); 
 Route::get('/p/create', [PostsController::class, 'create']);
 Route::post('/p', [PostsController::class, 'store']);
 Route::get('/p/{post}', [PostsController::class, 'show']);

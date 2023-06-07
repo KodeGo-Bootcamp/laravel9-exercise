@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Post;
 
 // use Intervention
 use Intervention\Image\Facades\Image;
@@ -10,6 +11,16 @@ class PostsController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+    }
+
+    public function index(){
+        $users = auth()->user()->following()->pluck('profiles.user_id');
+        // $posts = Post::whereIn('user_id',$users)->orderBy('created_at', 'DESC')->get();
+        $posts = Post::whereIn('user_id',$users)->latest()->get();
+        
+        //dd($user);
+        // dd($posts);
+        return view('posts.index',compact('posts'));
     }
 
     // create() is a user-defined function
